@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desa Karang</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link untuk Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+    <!-- Script untuk jQuery dan Slick Slider -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Logo Desa Karang">
+        <h1>Selamat Datang di Desa Karang</h1>
+        <p>Website Resmi Desa Karang</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Beranda</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> Tentang Desa</a></li>
+            <li><a href="news.html"><i class="fas fa-newspaper"></i> Berita</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Kontak</a></li>
+        </ul>
+    </nav>
+
+    <section class="fade-in-on-scroll">
+        <h2>Profil Desa</h2>
+        <p>Desa Karang adalah desa yang asri dan penuh potensi dengan kehidupan masyarakat yang rukun.</p>
+    </section>
+
+    <section class="slider">
+        <div class="slider-item">
+            <img src="images/kegiatan1.jpg" alt="Kegiatan masyarakat Desa Karang 1">
+        </div>
+        <div class="slider-item">
+            <img src="images/kegiatan2.jpg" alt="Kegiatan masyarakat Desa Karang 2">
+        </div>
+        <div class="slider-item">
+            <img src="images/kegiatan3.jpg" alt="Kegiatan masyarakat Desa Karang 3">
+        </div>
+    </section>
+
+    <section class="fade-in-on-scroll">
+        <h2>Berita Desa</h2>
+        <p>Berita terbaru tentang kegiatan dan pengumuman dari Desa Karang.</p>
+    </section>
+
+    <section>
+        <h2>Kontak</h2>
+        <p>Untuk informasi lebih lanjut, hubungi kami di email: m.robishaeri@gmail.com</p>
+        <a href="contact.html" class="btn">Hubungi Kami</a>
+    </section>
+
+    <section class="grid-container">
+        <div class="grid-item">
+            <h3>Layanan 1</h3>
+            <p>Deskripsi layanan pertama desa.</p>
+        </div>
+        <div class="grid-item">
+            <h3>Layanan 2</h3>
+            <p>Deskripsi layanan kedua desa.</p>
+        </div>
+        <div class="grid-item">
+            <h3>Layanan 3</h3>
+            <p>Deskripsi layanan ketiga desa.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Desa Karang</p>
+    </footer>
+
+    <script>
+        $(document).ready(function(){
+            $('.slider').slick({
+                infinite: true,
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                arrows: true,
+                pauseOnHover: true
+            });
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
