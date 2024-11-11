@@ -1,0 +1,495 @@
+/* Reset margin and padding untuk seluruh elemen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Menjamin ukuran elemen konsisten dengan padding dan border */
+}
+
+/* Body */
+body {
+  font-family: 'Arial', sans-serif; /* Font dasar */
+  color: #333; /* Warna teks */
+  background-color: #f9f9f9; /* Latar belakang halaman */
+  line-height: 1.6; /* Spasi antar baris */
+  background-image: url("images/background.jpg"); /* Gambar latar belakang */
+  background-size: cover; /* Menutupi seluruh layar */
+  background-position: center; /* Menyelaraskan gambar di tengah */
+  background-attachment: fixed; /* Menjaga gambar latar belakang tetap saat scroll */
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://www.w3schools.com/w3images/forest.jpg'); /* Gradien dan gambar latar belakang */
+  background-size: cover; /* Menutupi seluruh area header */
+  background-position: center; /* Menyelaraskan gambar di tengah */
+  color: white; /* Warna teks */
+  padding: 40px 20px; /* Padding header */
+  text-align: center; /* Menyelaraskan teks di tengah */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek kedalaman */
+}
+
+header h1 {
+  background-color: rgba(0, 0, 0, 0.5); /* Latar belakang dengan transparansi untuk teks */
+  padding: 10px;
+  border-radius: 5px; /* Sudut melengkung */
+}
+
+/* Navigasi Menu */
+nav {
+  background-color: #ebab34; /* Warna latar belakang menu */
+  padding: 10px 0;
+  text-align: center; /* Menyelaraskan menu di tengah */
+}
+
+nav ul {
+  list-style: none; /* Menghapus bullet point */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline; /* Menyusun menu secara horizontal */
+  margin-right: 20px; /* Jarak antar menu */
+}
+
+nav ul li a {
+  color: white; /* Warna teks link */
+  text-decoration: none; /* Menghapus garis bawah pada link */
+  font-size: 1.1em; /* Ukuran font */
+}
+
+nav ul li a:hover {
+  color: #01579b; /* Warna teks saat hover */
+}
+
+header img {
+  max-width: 80px; /* Ukuran gambar header */
+  margin-bottom: 10px; /* Jarak gambar dengan teks */
+  transition: transform 0.3s ease-in-out; /* Transisi saat gambar hover */
+}
+
+header img:hover {
+  transform: scale(1.1); /* Efek pembesaran saat hover */
+}
+
+header h1 {
+  font-size: 2em; /* Ukuran font judul */
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 1.2em; /* Ukuran font paragraf */
+}
+
+/* Section */
+section {
+  padding: 20px; /* Padding dalam section */
+  margin: 20px; /* Margin luar section */
+  background: white; /* Latar belakang putih */
+  border-radius: 15px; /* Sudut melengkung */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk kedalaman */
+}
+
+section h2 {
+  font-size: 1.8em; /* Ukuran font untuk heading */
+  color: #0288d1; /* Warna teks heading */
+  margin-bottom: 10px;
+  border-bottom: 2px solid #0288d1; /* Garis bawah pada heading */
+  padding-bottom: 5px;
+}
+
+section p {
+  font-size: 1.1em; /* Ukuran font paragraf */
+  color: #555; /* Warna teks paragraf */
+  margin-top: 10px; /* Margin atas untuk jarak dengan elemen sebelumnya */
+}
+
+/* Footer */
+footer {
+  background-color: #333; /* Warna latar belakang footer */
+  color: white; /* Warna teks */
+  padding: 20px 0;
+  text-align: center; /* Menyelaraskan teks di tengah */
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan pada bagian atas footer */
+}
+
+footer a {
+  color: #f1f1f1; /* Warna teks link di footer */
+  text-decoration: none; /* Menghapus garis bawah pada link */
+  font-size: 1.1em; /* Ukuran font */
+  margin: 0 10px; /* Jarak antar link */
+}
+
+footer a:hover {
+  color: #0288d1; /* Warna teks saat hover */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Posisi awal dari bawah */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Posisi akhir */
+  }
+}
+
+/* Link Styles */
+a {
+  color: #0288d1; /* Warna teks link */
+  text-decoration: none; /* Menghapus garis bawah pada link */
+  transition: color 0.3s ease-in-out; /* Efek transisi saat hover */
+}
+
+a:hover {
+  color: #01579b; /* Warna teks saat hover */
+  text-decoration: underline; /* Garis bawah saat hover */
+}
+
+/* Media Query untuk perangkat kecil */
+@media screen and (max-width: 768px) {
+  /* Mengubah ukuran font pada hero */
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  /* Mengubah tata letak navigasi menjadi vertikal */
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Jarak antar item menu pada navigasi */
+  nav ul li {
+    margin-bottom: 10px;
+  }
+}
+
+/* Header muncul dengan animasi */
+header {
+  animation: fadeInHeader 1s ease-in-out;
+}
+
+@keyframes fadeInHeader {
+  from {
+    opacity: 0;
+    transform: translateY(-50px); /* Posisi awal dari atas */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Posisi akhir */
+  }
+}
+
+/* Efek fade-in untuk konten section */
+section {
+  animation: fadeIn 1s ease-in-out 0.5s; /* Delay animasi */
+}
+
+/* Media Query untuk perangkat kecil */
+@media screen and (max-width: 768px) {
+  .slider-item img {
+    height: 200px;
+    object-fit: cover; /* Memastikan gambar terisi penuh dalam box */
+  }
+}
+
+/* Slider */
+.slider {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto; /* Menyelaraskan slider di tengah */
+  border-radius: 10px; /* Sudut melengkung pada slider */
+  overflow: hidden; /* Menyembunyikan gambar yang meluap */
+}
+
+.slider-item img {
+  width: 100%; /* Mengisi lebar slider */
+  height: auto; /* Menjaga proporsi gambar */
+  border-radius: 10px; /* Sudut melengkung pada gambar */
+  object-fit: cover; /* Memastikan gambar menutupi area tanpa mengubah rasio */
+}
+
+button {
+  background-color: #0288d1; /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  padding: 10px 20px; /* Padding dalam tombol */
+  border: none; /* Menghapus border */
+  font-size: 1.1em; /* Ukuran font tombol */
+  cursor: pointer; /* Mengubah kursor saat hover */
+  border-radius: 5px; /* Sudut melengkung pada tombol */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Efek transisi */
+}
+
+button:hover {
+  background-color: #01579b; /* Warna latar belakang saat hover */
+  transform: scale(1.05); /* Efek pembesaran saat hover */
+}
+
+/* Grid Layout untuk tampilan responsif */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Menyusun grid otomatis */
+  gap: 20px; /* Jarak antar elemen grid */
+  padding: 20px; /* Padding dalam grid */
+}
+
+.grid-item {
+  background: white; /* Latar belakang putih untuk item grid */
+  padding: 20px; /* Padding dalam item */
+  border-radius: 8px; /* Sudut melengkung */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  transition: transform 0.3s ease-in-out; /* Efek transisi saat hover */
+}
+
+.grid/* Reset margin and padding untuk seluruh elemen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Menjamin ukuran elemen konsisten dengan padding dan border */
+}
+
+/* Body */
+body {
+  font-family: 'Arial', sans-serif; /* Font dasar */
+  color: #333; /* Warna teks */
+  background-color: #f9f9f9; /* Latar belakang halaman */
+  line-height: 1.6; /* Spasi antar baris */
+  background-image: url("images/background.jpg"); /* Gambar latar belakang */
+  background-size: cover; /* Menutupi seluruh layar */
+  background-position: center; /* Menyelaraskan gambar di tengah */
+  background-attachment: fixed; /* Menjaga gambar latar belakang tetap saat scroll */
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://www.w3schools.com/w3images/forest.jpg'); /* Gradien dan gambar latar belakang */
+  background-size: cover; /* Menutupi seluruh area header */
+  background-position: center; /* Menyelaraskan gambar di tengah */
+  color: white; /* Warna teks */
+  padding: 40px 20px; /* Padding header */
+  text-align: center; /* Menyelaraskan teks di tengah */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek kedalaman */
+}
+
+header h1 {
+  background-color: rgba(0, 0, 0, 0.5); /* Latar belakang dengan transparansi untuk teks */
+  padding: 10px;
+  border-radius: 5px; /* Sudut melengkung */
+}
+
+/* Navigasi Menu */
+nav {
+  background-color: #ebab34; /* Warna latar belakang menu */
+  padding: 10px 0;
+  text-align: center; /* Menyelaraskan menu di tengah */
+}
+
+nav ul {
+  list-style: none; /* Menghapus bullet point */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline; /* Menyusun menu secara horizontal */
+  margin-right: 20px; /* Jarak antar menu */
+}
+
+nav ul li a {
+  color: white; /* Warna teks link */
+  text-decoration: none; /* Menghapus garis bawah pada link */
+  font-size: 1.1em; /* Ukuran font */
+}
+
+nav ul li a:hover {
+  color: #01579b; /* Warna teks saat hover */
+}
+
+header img {
+  max-width: 80px; /* Ukuran gambar header */
+  margin-bottom: 10px; /* Jarak gambar dengan teks */
+  transition: transform 0.3s ease-in-out; /* Transisi saat gambar hover */
+}
+
+header img:hover {
+  transform: scale(1.1); /* Efek pembesaran saat hover */
+}
+
+header h1 {
+  font-size: 2em; /* Ukuran font judul */
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 1.2em; /* Ukuran font paragraf */
+}
+
+/* Section */
+section {
+  padding: 20px; /* Padding dalam section */
+  margin: 20px; /* Margin luar section */
+  background: white; /* Latar belakang putih */
+  border-radius: 15px; /* Sudut melengkung */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk kedalaman */
+}
+
+section h2 {
+  font-size: 1.8em; /* Ukuran font untuk heading */
+  color: #0288d1; /* Warna teks heading */
+  margin-bottom: 10px;
+  border-bottom: 2px solid #0288d1; /* Garis bawah pada heading */
+  padding-bottom: 5px;
+}
+
+section p {
+  font-size: 1.1em; /* Ukuran font paragraf */
+  color: #555; /* Warna teks paragraf */
+  margin-top: 10px; /* Margin atas untuk jarak dengan elemen sebelumnya */
+}
+
+/* Footer */
+footer {
+  background-color: #333; /* Warna latar belakang footer */
+  color: white; /* Warna teks */
+  padding: 20px 0;
+  text-align: center; /* Menyelaraskan teks di tengah */
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan pada bagian atas footer */
+}
+
+footer a {
+  color: #f1f1f1; /* Warna teks link di footer */
+  text-decoration: none; /* Menghapus garis bawah pada link */
+  font-size: 1.1em; /* Ukuran font */
+  margin: 0 10px; /* Jarak antar link */
+}
+
+footer a:hover {
+  color: #0288d1; /* Warna teks saat hover */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Posisi awal dari bawah */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Posisi akhir */
+  }
+}
+
+/* Link Styles */
+a {
+  color: #0288d1; /* Warna teks link */
+  text-decoration: none; /* Menghapus garis bawah pada link */
+  transition: color 0.3s ease-in-out; /* Efek transisi saat hover */
+}
+
+a:hover {
+  color: #01579b; /* Warna teks saat hover */
+  text-decoration: underline; /* Garis bawah saat hover */
+}
+
+/* Media Query untuk perangkat kecil */
+@media screen and (max-width: 768px) {
+  /* Mengubah ukuran font pada hero */
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  /* Mengubah tata letak navigasi menjadi vertikal */
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Jarak antar item menu pada navigasi */
+  nav ul li {
+    margin-bottom: 10px;
+  }
+}
+
+/* Header muncul dengan animasi */
+header {
+  animation: fadeInHeader 1s ease-in-out;
+}
+
+@keyframes fadeInHeader {
+  from {
+    opacity: 0;
+    transform: translateY(-50px); /* Posisi awal dari atas */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Posisi akhir */
+  }
+}
+
+/* Efek fade-in untuk konten section */
+section {
+  animation: fadeIn 1s ease-in-out 0.5s; /* Delay animasi */
+}
+
+/* Media Query untuk perangkat kecil */
+@media screen and (max-width: 768px) {
+  .slider-item img {
+    height: 200px;
+    object-fit: cover; /* Memastikan gambar terisi penuh dalam box */
+  }
+}
+
+/* Slider */
+.slider {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto; /* Menyelaraskan slider di tengah */
+  border-radius: 10px; /* Sudut melengkung pada slider */
+  overflow: hidden; /* Menyembunyikan gambar yang meluap */
+}
+
+.slider-item img {
+  width: 100%; /* Mengisi lebar slider */
+  height: auto; /* Menjaga proporsi gambar */
+  border-radius: 10px; /* Sudut melengkung pada gambar */
+  object-fit: cover; /* Memastikan gambar menutupi area tanpa mengubah rasio */
+}
+
+button {
+  background-color: #0288d1; /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  padding: 10px 20px; /* Padding dalam tombol */
+  border: none; /* Menghapus border */
+  font-size: 1.1em; /* Ukuran font tombol */
+  cursor: pointer; /* Mengubah kursor saat hover */
+  border-radius: 5px; /* Sudut melengkung pada tombol */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Efek transisi */
+}
+
+button:hover {
+  background-color: #01579b; /* Warna latar belakang saat hover */
+  transform: scale(1.05); /* Efek pembesaran saat hover */
+}
+
+/* Grid Layout untuk tampilan responsif */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Menyusun grid otomatis */
+  gap: 20px; /* Jarak antar elemen grid */
+  padding: 20px; /* Padding dalam grid */
+}
+
+.grid-item {
+  background: white; /* Latar belakang putih untuk item grid */
+  padding: 20px; /* Padding dalam item */
+  border-radius: 8px; /* Sudut melengkung */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  transition: transform 0.3s ease-in-out; /* Efek transisi saat hover */
+}
+
+.grid
